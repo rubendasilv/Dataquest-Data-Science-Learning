@@ -1,0 +1,32 @@
+from statistics import ( fmean, geometric_mean, harmonic_mean, mean,
+                        median,
+                        mode,
+                        variance,
+                        stdev,
+                        quantiles, linear_regression)
+
+
+
+scores = [61, 73, 68, 82, 91, 73, 77, 85, 69, 73]
+
+averages = mean(scores)
+middles = median(scores)
+most_common = mode(scores)
+sample_stdev = stdev(scores)
+cuts = quantiles(scores, n=4)
+p25 = cuts[0]
+p75 = cuts[2]
+iqr = p75 - p25
+
+if sample_stdev > 10:
+    print("Scores have relatively high variation.")
+else:
+    print("Scores have relatively low variation.")
+
+print("Mean:", averages)
+print("Median:", middles)
+print("Mode:", most_common)
+print("Standard Deviation:", sample_stdev)
+print("Q1:", p25)
+print("Q3:", p75)
+print("IQR:", iqr)
