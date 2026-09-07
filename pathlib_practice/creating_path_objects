@@ -1,0 +1,7 @@
+from pathlib import Path
+
+Project = Path("Project")
+data = Project / "data"
+raw = data / "raw"
+sales = raw / "sales.csv"
+print(sales)

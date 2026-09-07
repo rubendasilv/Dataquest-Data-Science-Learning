@@ -1,0 +1,28 @@
+from pathlib import Path
+
+project = Path("project")#naming filesystem to project
+project.mkdir(exist_ok=True) #creating dictonary
+
+data = project / "data" #naming parent file as data
+data.mkdir(exist_ok=True) #creating dictionary
+
+readme = project / "README.md" # naming file
+readme.touch()# creating file 
+
+main = project / "main.py"# naming file as main 
+main.touch()# creating file
+
+for item in project.iterdir():
+    if item.is_dir():
+        print("Directory", item.name)
+    elif item.is_file():
+        print("File", item.name)
+
+for file in project.glob("*.py"):
+    print("Python file", file.name)
+
+for file in project.glob("*.txt"):
+    print("Text file", file.name)
+
+for file in project.glob("*.csv"):
+    print("comma space value", file.name)

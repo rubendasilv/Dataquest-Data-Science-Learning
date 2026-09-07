@@ -1,0 +1,8 @@
+from pathlib import Path
+
+path = Path("documents/financial_report.csv")
+print(path)
+print("Name:", path.name)
+print("Stem:", path.stem)
+print("Suffix:", path.suffix)
+print("Parent:", path.parent)

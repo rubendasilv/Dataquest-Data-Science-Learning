@@ -1,0 +1,16 @@
+from pathlib import Path
+
+company = Path("company")
+projects = company / "projects"
+python = projects / "python"
+pathlib = python / "pathlib"
+exercises = pathlib / "exercises"
+activity = exercises / "activtiy.py"
+
+print(activity.name)
+print(activity.stem)
+print(activity.suffix)
+print(activity.parent)
+print(activity.is_absolute())
+
+

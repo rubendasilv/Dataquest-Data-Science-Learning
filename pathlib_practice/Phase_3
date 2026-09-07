@@ -1,0 +1,12 @@
+from pathlib import Path
+
+data = Path("data")
+print("data:", Path.exists)
+print("data:", data.is_file())
+data.mkdir()
+print("data:", data.is_dir())
+
+
+file = Path("example.txt")
+file.touch()
+print("file:", file.is_file())
